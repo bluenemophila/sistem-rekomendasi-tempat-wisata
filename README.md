@@ -2,11 +2,16 @@
 
 ## Project Overview
 
-Sektor pariwisata merupakan salah satu penopang perekonomian Indonesia, menyumbangkankan 5.0% dari pendapatan domestik bruto (PDB) Indonesia dan memiliki andil besar sebagai sumber devisa utama [1]. Akibat pembatasan di ebrbagai negara akibat pandemi COVID-19 beberapa tahun lalu, kunjungan wisatawan mengalami penurunan yang sangat drastis dan memberikan dampak yang signifikan pada sektor-sektor terkait seperti sektor akomodasi, restoran, maupun transportasi. Namun, di tahun 2023 ini sektor pariwisata telah mengalami pemulihan dan semakin menguat, dan diprediksikan angkanya akan semakin naik hingga tahun 2024 mendatang.
+Sektor pariwisata merupakan salah satu penopang perekonomian Indonesia, menyumbangkankan 5.0% dari pendapatan domestik bruto (PDB) Indonesia dan memiliki andil besar sebagai sumber devisa utama [1]. Akibat pembatasan di berbagai negara akibat pandemi COVID-19 beberapa tahun lalu, kunjungan wisatawan mengalami penurunan yang sangat drastis dan memberikan dampak yang signifikan pada sektor-sektor terkait seperti sektor akomodasi, restoran, maupun transportasi. Namun, di tahun 2023 ini sektor pariwisata telah mengalami pemulihan dan semakin menguat, dan diprediksikan angkanya akan semakin naik hingga tahun 2024 mendatang.
 
 Tercatat pada kuartal pertama tahun 2023, kunjungan wisatawan mancanegara naik drastis sebesar 393.83% dari periode yang sama pada tahun 2022 [2]. Tidak ketinggalan, dari sektor domestik sendiri perjalanan wisatawan lokal telah menyentuh angka 433.57 juta perjalanan selama semester I tahun 2023 [3]. Dalam rangka menjaga kenaikan ini, pemerintah maupun pihak terkait gencar menyusun strategi untuk pengembangan potensi wisata.
 
-Bila dianalisis, kunjungan wisatawan lokal Indonesia terbanyak berada di Provinsi Jawa Timur, disusul Provinsi Jawa Barat, Jawa Tengah, Banten, dan D.I. Yogyakarta. Dengan jumlah wisatawan lokal yang semakin meningkat setiap waktu, diperlukan strategi untuk merekomendasikan destinasi wisata terhadap wisatawan potensial sehingga ketertarikan wisatawan akan semakin meningkat.
+Bila dianalisis, kunjungan wisatawan lokal Indonesia terbanyak berada di Provinsi Jawa Timur, disusul Provinsi Jawa Barat, Jawa Tengah, Banten, dan D.I. Yogyakarta. Dengan jumlah wisatawan lokal yang semakin meningkat setiap waktu, diperlukan strategi untuk merekomendasikan destinasi wisata terhadap wisatawan potensial.
+
+Penggunaan sistem rekomendasi dalam sektor pariwisata ini memiliki beberapa manfaat, diantaranya yaitu:
+- Bagi penyedia jasa wisata : sistem rekomendasi dapat menghasilkan penawaran dan informasi yang relevan kepada pelanggan potensial sehingga efektivitas kampanya pemasaran akan meningkat dan menghasilkan peningkatan kunjungan.
+- Bagi pengelola lokasi wisata : Sistem rekomendasi dapat memperkenalkan pengguna dan membuka peluang bagi destinasi-destinasi wisata untuk mendapatkan perhatian dan kunjungan. Selain itu, dengan sistem rekomendasi pengguna akan terarah ke banyak destinasi wisata sehingga dapat mengurangi kepadatan di wisata-wisata tertentu saja.
+- Bagi pengguna : Sistem rekomendasi memungkinkan pengguna mendapatkan rekomendasi destinasi yang sesuai dengan preferensi masing-masing, sehingga dapat meningkatkan kepuasan pengguna. Selain itu, sistem rekomendasi juga sangat membantu dalam pengguna merencanakan rencana perjalanan yang lebih baik.
 
 ## Business Understanding
 
@@ -81,6 +86,18 @@ Data ini berisi destinasi wisata di 5 kota besar di Indonesia, yaitu Jakarta, Yo
   
 Pada data terdapat 437 destinasi wisata, dengan 10000 ulasan yang ditulis oleh 300 pengguna unik. Terdapat 6 kategori dari destinasi wisata, yaitu kategori budaya, taman hiburan, cagar alam, bahari, pusat perbelanjaan, dan tempat ibadah. Destinasi-destinasi wisata tersebut tersebar dalam 5 kota utama yaitu Jakarta, Yogyakarta, Bandung, Semarang, dan Surabaya.
 
+Statistik deskriptif dari data tersebut adalah seperti berikut.
+
+| | Place_Ratings |Price|User Age|
+|-----|-----|-----|-----|
+|mean|	3.066500|24652.173913|28.7|
+|std|	1.379952|66446.374709|6.393716|
+|min|	1.0|0|6.393716|18|
+|25%|	2.0|0|24|
+|50%|	3.0|5000|29|
+|75%|	4.0|20000|34|
+|max|	5.0|900000|40|
+
 Berdasarkan letak kotanya, distribusi destinasi wisata dapat dikelompokkan seperti berikut.
 
 ![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/fdae7225-e496-4e3e-846a-0f45ecbb65a0)
@@ -103,23 +120,37 @@ Untuk melihat berapa banyak antusiasme wisatawan terhadap destinasi wisata, dapa
 
 <p align="center">Gambar 3. 10 Destinasi Wisata dengan Ulasan Terbanyak</p>
 
+Selain berdasarkan banyaknya ulasan, dapat dilihat 10 destinasi wisata dengan rata-rata ulasan terbaik. Rata-rata ulasan destinasi wisata ini mencapai 4.9-5 bintang.
+
+![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/8fb66978-b528-485b-880b-52860c222ca9)
+
+<p align="center">Gambar 4. 10 Destinasi Wisata dengan Ulasan Terbaik</p>
+
 Beberapa hal yang mempengaruhi ketertarikan pengunjung pada destinasi wisata salah satunya adalah harga tiket masuk ke destinasi wisata tersebut. Berikut ini adalah 10 tempat wisata dengan harga tiket masuk tertinggi.
 
 ![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/5f25affa-caec-4189-9430-60b131072577)
 
-<p align="center">Gambar 4. 10 Destinasi Wisata dengan Harga Tiket Masuk Tertinggi</p>
+<p align="center">Gambar 5. 10 Destinasi Wisata dengan Harga Tiket Masuk Tertinggi</p>
 
 Selain mengeksplor dari segi destinasi wisatanya sendiri, dapat dieksplor juga dari segi pengguna yang meninggalkan ulasan di lokasi wisata tersebut. Berikut ini adalah jumlah pengulas berdasarkan kota asalnya.
 
 ![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/6f1ff765-1397-4c1a-abac-bf86e5dfccdd)
 
-<p align="center">Gambar 5. Jumlah Pengulas Berdasarkan Kota Asal</p>
+<p align="center">Gambar 6. Jumlah Pengulas Berdasarkan Kota Asal</p>
+
+Dapat dilihat pula distribusi pengguna menurut usianya, dimana hal ini dapat digunakan untuk merekomendasikan destinasi wisata sesuai segmen usia.
+
+![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/e949c0fa-4b5a-49fb-bd8b-6d1b99c6bc29)
+
+<p align="center">Gambar 7. Jumlah Pengguna Berdasarkan Usia</p>
+
+Dapat dilihat pengguna berada di rentang usia yang cukup muda, yaitu 18-40 tahun dengan pengguna terbanyak berusia 30 tahun.
 
 Setelah mengamati pola data dan mengeksplorasi strukturnya, dapat dilakukan tahap selanjutnya yaitu persiapan data.
 
 ## Data Preparation
 
-### Analisis data hilang dan penghapusan fitur yang tidak diperlukan
+### Handling missing data
 
 Dalam tahap eksplorasi data, terlihat pada variabel _tourism with id_ masih memiliki nilai yang kosong yaitu pada fitur di bawah ini.
 
@@ -128,13 +159,17 @@ Dalam tahap eksplorasi data, terlihat pada variabel _tourism with id_ masih memi
 |Time Minutes|232|
 |Unnamed: 11|437|
 
-Setelah ditelusuri fitur _Unnamed: 11_ merupakan kolom kosong yang tidak berisi data, sehingga dapat dihapus dari analisis. Fitur _Time Minutes_ merupakan fitur mengenai waktu yang dihabiskan oleh pengunjung di destinasi wisata, sehingga nilainya tidak dapat dibangkitkan. Data yang hilang pada fitur tersebut juga cukup banyak > 50%, sehingga diputuskan untuk menghapusnya dari analisis dikarenakan relevansinya pada sistem rekomendasi yang kurang.
+Setelah ditelusuri fitur _Unnamed: 11_ merupakan kolom kosong yang tidak berisi data, sehingga dapat dihapus dari analisis.
+
+Fitur _Time Minutes_ merupakan fitur mengenai waktu yang dihabiskan oleh pengunjung di destinasi wisata, sehingga nilainya tidak dapat dibangkitkan. Data yang hilang pada fitur tersebut juga cukup banyak > 50%, sehingga diputuskan untuk menghapusnya dari analisis dikarenakan relevansinya pada sistem rekomendasi yang kurang.
 
 Selain kedua fitur tersebut, terdapat pula fitur _Unnamed: 12_ yang merupakan kolom tanpa identitas. Dikarenakan identitas fitur yang dijelaskan dari kolom tersebut belum jelas, maka kolom tersebut juga dapat dihapus dari analisis.
 
 ### Merge dataset
 
-Tahap selanjutnya dari proses persiapan data adalah penggabungan data dari tabel-tabel yang ada. Tabel _tourism rating, tourism with id_ dan tabel _user_ dapat dihubungkan dikarenakan tabel tersebut terdapat relasi antara pengguna yang meninggalkan review pada destinasi wisata yang pernah dikunjungi. Dalam penggabungan tabel, dilakukan penggabungan berdasarkan ID yang sama pada tabel yang berhubungan. Berikut ini adalah relasi dan tabel baru yang dihasilkan dari penggabungan tersebut.
+Tahap selanjutnya dari proses persiapan data adalah penggabungan data dari tabel-tabel yang ada. Penggabungan data ini dapat membantu dalam membangun model dikarenakan data yang sebelumnya terpisah dalam 3 tabel dapat dihubungkan menjadi 1 tabel yang berkesinambungan dengan kunci tertentu.
+
+Tabel _tourism rating, tourism with id_ dan tabel _user_ dapat dihubungkan dikarenakan tabel tersebut terdapat relasi antara pengguna yang meninggalkan review pada destinasi wisata yang pernah dikunjungi. Dalam penggabungan tabel, dilakukan penggabungan berdasarkan ID yang sama pada tabel yang berhubungan. Berikut ini adalah relasi dan tabel baru yang dihasilkan dari penggabungan tersebut.
 
 |Relasi|Kunci|Relasi|Tabel baru|
 |-----|-----|-----|-----|
@@ -156,13 +191,6 @@ TF-IDF Vectorizer digunakan untuk menemukan representasi fitur penting dari seti
 2. Melakukan perhitungan IDF pada data destinasi wisata
 3. Melakukan _mapping_ fitur index ke fitur nama desrtinasi kategori
 4. Membentuk matriks TF-IDF
-
-Hasil dari TF-IDF Vectorizer tersebut adalah kategori dalam bentuk _array_ seperti berikut ini.
-
-```
-array(['bahari', 'budaya', 'cagar_alam', 'pusat_perbelanjaan',
-       'taman_hiburan', 'tempat_ibadah'], dtype=object)
-```
 
 Setelah dibawa ke dalam bentuk matriks, akan didapatkan nilai-nilai untuk setiap tempat wisata berdasarkan kategorinya. Salah satu contohnya adalah seperti berikut.
 
@@ -186,17 +214,9 @@ Dari contoh tersebut berarti Kota Mini memiliki kesamaan dengan Dunia Fantasi, T
 
 #### Mendapatkan rekomendasi
 
-Setelah memiliki data kesamaan antara destinasi wisata, dapat digunakan untuk membentuk rekomendasi pada pengguna. Dibuat fungsi seperti di bawah ini.
+Setelah memiliki data kesamaan antara destinasi wisata, dapat digunakan untuk membentuk rekomendasi pada pengguna. 
 
-```
-def destination_recommendations(place_name, similarity_data=cosine_sim, items=tourism_with_id[['Place_Name', 'City', 'Category']], k=10):
-    index = similarity_data.loc[:,place_name].to_numpy().argpartition(range(-1, -k, -1))
-    closest = similarity_data.columns[index[-1:-(k+2):-1]]
-    closest = closest.drop(place_name, errors='ignore')
-    return pd.DataFrame(closest).merge(items).head(k)
-```
-
-Parameter dari fungsi tersebut adalah
+Untuk mendapatkan rekomendasi, dapat didefinisikan fungsi dengan parameter sepeti berikut.
 - place_name : Nama destinasi wisata
 - similarity_data : _Dataframe_ kesamaan yang telah didefinisikan dengan _cosine similarity_ sebelumnya
 - items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan
@@ -204,11 +224,9 @@ Parameter dari fungsi tersebut adalah
 
 Setelah dijalankan proses rekomendasinya, dapat dimasukkan nama destinasi wisata ke dalam fungsi tersebut untuk mendapatkan 10 rekomendasi tempat wisata yang mirip.
 
-Bererapa contohnya adalah sebagai berikut.
+Salah satu contoh nyata dalam penggunaan sistem rekomendasi _content based filtering_ ini adalah ketika pengguna sedang menelusuri destinasi wisata Monumen Nasional yang memiliki kategori budaya. Sistem rekomendasi akan menampilkan daftar destinasi wisata lainnya di bawah hasil pencarian tersebut, seperti di bawah ini.
 
-Input : Kategori Budaya
-
-```destination_recommendations('Monumen Nasional')```
+Input : Monumen Nasional (Kategori Budaya)
 
 Rekomendasi :
 |Place_Name	|City	|Category|
@@ -224,9 +242,9 @@ Rekomendasi :
 |Taman Budaya Yogyakarta|	Yogyakarta|	Budaya|
 |Kampung Wisata Sosro Menduran|	Yogyakarta|	Budaya|
 
-Input : Kategori Bahari
+Contoh lainnya dari penggunaan sistem rekomendasi ini adalah ketika pengguna menyukai tempat wisata Pantai Cipta yang berkategori bahari, setelah menyukai tempat wisata tersebut, sistem rekomendasi dapat menampilkan tempat wisata lain dengan kategori yang sama di beranda pengguna seperti di bawah ini.
 
-```destination_recommendations('Pantai Cipta')```
+Input : Pantai Cipta (Kategori Bahari)
 
 |Place_Name	|City	|Category|
 |-----|-----|-----|
@@ -245,19 +263,11 @@ Dari hasil _content based filtering_ tersebut telah dihasilkan rekomendasi yang 
 
 ### Collaborative filtering
 
-Pada model _collaborative filtering_ yang digunakan, tahapannya adalah sebagai berikut.
+Model sistem rekomendasi lainnya yang dapat digunakan adalah _collaborative filtering._ Dengan menggunakan model ini, dapat direkomendasikan item sesuai dengan preferensi pengguna di masa lalu. Hal ini sangat bermanfaat dalam sistem rekomendasi destinasi wisata, karena dengan melihat riwayat ulasan pengguna di masa lalu, kita dapat memberikan sistem rekomendasi yang lebih beragam dan tentunya sesuai dengan minat pengguna dilihat dari ulasan yang tinggi pada item tersebut. Pada model _collaborative filtering_ yang digunakan, tahapannya adalah sebagai berikut.
 
 #### Persiapan data
 
-Pertama-tama sebelum melakukan pemodelan, fitur 'user id' dan 'place id' harus disandikan (encoding) terlebih dahulu menjadi indeks _integer._ Beberapa hasilnya adalah seperti berikut.
-
-```
-list User ID :  [36, 38, 64, ...]
-encoded user ID :  {36: 0, 38: 1, 64: 2, ...}
-encoded angka ke user ID:  {0: 36, 1: 38, 2: 64, ...}
-```
-
-Selanjutnya, dipetakan 'user id' dan 'place id' ke tabel yang berkaitan, lalu mengubah data-data numerik menjadi tipe data _float._
+Pertama-tama sebelum melakukan pemodelan, fitur 'user id' dan 'place id' harus disandikan (encoding) terlebih dahulu menjadi indeks _integer._ Selanjutnya, dipetakan 'user id' dan 'place id' ke tabel yang berkaitan, lalu mengubah data-data numerik menjadi tipe data _float._
 
 Setelah menyelesaikan langkah tersebut, dilakukan pembagian data menjadi 80% data latih dan 20% data uji. Hal ini dilakukan supaya model dapat diuji terhadap data yang belum pernah dilihat sebelumnya. Melakukan pembagian tersebut juga berfungsi untuk menghindari _overfitting,_ yaitu akurasi yang tinggi ketika digunakan untuk memodelkan data latih, namun performanya buruk jika memodelkan data yang belum pernah dilihat sebelumnya.
 
@@ -265,41 +275,9 @@ Setelah menyelesaikan langkah tersebut, dilakukan pembagian data menjadi 80% dat
 
 Dalam memodelkan dengan _collaborative filtering_ digunakan algoritma RecommenderNet dari _library_ model keras Tensorflow. Di dalam fungsi pemodelan ini dilakukan operasi perkalian _dot product_ terhadap _embedding_ pengguna dan destinasi wisata. Selain itu ditambahkan pula bias untuk setiap pengguna dan destinasi wisata. Skor kecocokan selanjutnya ditetapkan dalam skala [0,1] dengan fungsi aktivasi sigmoid.
 
-Selanjutnya dilakukan proses _compile_ terhadap model, 
+Di dalam inisialisasi fungsi RecommenderNet sendiri terdapat beberapa _layer_ diantaranya adalah _layer embedding_ untuk pengguna dan _layer embedding_ untuk destinasi wisata. Fungsi dari _embedding_ sendiri adalah untuk mengkonversi data kategorik dari kedua fitur tersebut untuk menangkap kesamaan diantaranya. Di dalam _layer embedding_ tersebut terdapat parameter inisialisasi 'he_normal' yang digunakan untuk menginisialisasi bobot yang terambil dari distribusi normal, dan regularisasi l2 dengan _learning rate_ 0.000001 untuk mencegah _overfitting_ pada lapisan _embedding._
 
-```
-model = RecommenderNet(num_users, num_destination, 50)
- 
-model.compile(
-    loss = tf.keras.losses.BinaryCrossentropy(),
-    optimizer = keras.optimizers.Adam(learning_rate=0.001),
-    metrics=[tf.keras.metrics.RootMeanSquaredError()]
-)
-```
-
-Digunakan Binary Crossentropy untuk menghitung _loss function_, Adam (Adaptive Moment Estimation) sebagai _optimizer) dan RMSE sebagai metriks evaluasi.
-
-Selanjutnya dapat dimulai proses training.
-
-```
-history = model.fit(
-    x = x_train,
-    y = y_train,
-    epochs = 100,
-    validation_data = (x_val, y_val)
-)
-```
-
-Digunakan ukuran _epoch_ sebanyak 100 _epoch_ dalam proses tersebut. Sebagian _outpunya_ adalah sebagai berikut.
-
-```
-Epoch 98/100
-250/250 [==============================] - 0s 1ms/step - loss: 0.6674 - root_mean_squared_error: 0.3256 - val_loss: 0.7154 - val_root_mean_squared_error: 0.3632
-Epoch 99/100
-250/250 [==============================] - 0s 1ms/step - loss: 0.6675 - root_mean_squared_error: 0.3257 - val_loss: 0.7156 - val_root_mean_squared_error: 0.3633
-Epoch 100/100
-250/250 [==============================] - 0s 1ms/step - loss: 0.6677 - root_mean_squared_error: 0.3258 - val_loss: 0.7156 - val_root_mean_squared_error: 0.3633
-```
+Selanjutnya dilakukan proses _compile_ terhadap model dengan parameter Binary Crossentropy untuk menghitung _loss function_, Adam (Adaptive Moment Estimation) sebagai _optimizer) dan RMSE sebagai metriks evaluasi. Setelah proses tersebut dapat dilakukan training model. Digunakan ukuran _epoch_ sebanyak 100 _epoch_ dalam proses tersebut.
 
 Hasil plot metriks dapat dievaluasi untuk melihat apakah proses training sudah berjalan dengan baik.
 
@@ -374,9 +352,21 @@ Rekomendasi untuk `destination_recommendations('Hutan Bambu Keputih')`, kategori
 
 Dari hasil tersebut diketahui
 
-$`presisi sistem rekomendasi : P = \frac{jumlah rekomendasi yang relevan}{jumlah item rekomendasi} = \frac{7}{7}`$
+$`presisi sistem rekomendasi : P = \frac{jumlah rekomendasi yang relevan}{jumlah item rekomendasi} = \frac{10}{10}`$
 
 Presisi sistem rekomendasi yang dihasilkan adalah 100%, dimana telah direkomendasikan 10 destinasi wisata dengan kategori yang sesuai dengan kategori yang diinginkan pengguna. Hal ini dapat dilihat juga dari contoh yang telah diberikan pada bagian sebelumnya.
+
+Selain presisi, dapat dihitung _recall_ dari sistem rekomendasi tersebut, yaitu proporsi rekomendasi yang relevan dari 10 rekomendasi diberikan. Formula dari recall adalah seperti berikut ini.
+
+$`recall sistem rekomendasi : R = \frac{jumlah rekomendasi yang relevan}{jumlah item yang relevan dalam rekomenadasi} = \frac{10}{10}`$
+
+Recall yang dihasilkan adalah 100%, dimana dari 10 item yang relevan dalam rekomendasi yang dihasilkan, semuanya memiliki kategori yang sesuai dengan kategori yang diinginkan oleh pengguna.
+
+Dari presisi dan recall tersebut, dapat dihitung F1 Score dari sistem rekomendasi tersebut, dimana F1 Score adalah satuan untuk mengukur kinerja model secara keseluruhan dengan mempertimbangkan keseimbangan antara precision dan recall. Formula dari F1 Score adalah seperti berikut ini.
+
+$`F1 Score sistem rekomendasi : F1 = \frac{2*(Precision*Recall)}{Precision+Recall} = \frac{2*(100*100)}{100+100} = \frac{20000}{200}`$
+
+F1 Score dari sistem rekomendasi tersebut adalah 100% dimana sistem rekomendasi telah berhasil memberikan rekomendasi yang relevan untuk semua kategori.
 
 ### Collaborative filtering
 
@@ -390,12 +380,19 @@ $`RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2
 
 Dihasilkan grafik evaluasi training seperti berikut.
 
-
 ![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/bba2f97d-da3c-4e75-85e6-a946e61cb529)
 
-<p align="center">Gambar 6. Plot Evaluasi Hasil Training</p>
+<p align="center">Gambar 8. Plot Evaluasi Hasil Training</p>
 
 Dapat dilihat, proses training model cukup _smooth_ dan model konvergen di sekitar _epoch_ 100. Dari proses tersebut, terlihat error akhir sebesar 0.32 untuk data latih dan 0.36 untuk data uji.
+
+Selain melakukan evaluasi dengan RMSE, dapat dievaluasi juga performa model dengan MAE seperti berikut ini.
+
+![image](https://github.com/bluenemophila/sistem-rekomendasi-tempat-wisata/assets/126690692/669fe950-7e4a-4258-a395-ba498fd65ac5)
+
+<p align="center">Gambar 8. Plot Evaluasi Hasil Training dengan MAE.</p>
+
+Dapat dilihat juga proses training yang cukup _smooth_ yang konvergen di sekitar _epoch_ 100. Dari metriks evaluasi MAE, diketahui error akhir sebesar 0.28 untuk data latih dan 0.31 untuk data uji.
 
 # Referensi
 
