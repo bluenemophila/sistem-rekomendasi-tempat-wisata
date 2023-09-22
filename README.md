@@ -374,7 +374,7 @@ Rekomendasi untuk `destination_recommendations('Hutan Bambu Keputih')`, kategori
 
 Dari hasil tersebut diketahui
 
-$`presisi sistem rekomendasi : P = \frac{jumlah rekomendasi yang relevan}{jumlah item rekomendasi} = \frac{7}{7} = 100%`$
+$`presisi sistem rekomendasi : P = \frac{jumlah rekomendasi yang relevan}{jumlah item rekomendasi} = \frac{7}{7}`$
 
 Presisi sistem rekomendasi yang dihasilkan adalah 100%, dimana telah direkomendasikan 10 destinasi wisata dengan kategori yang sesuai dengan kategori yang diinginkan pengguna. Hal ini dapat dilihat juga dari contoh yang telah diberikan pada bagian sebelumnya.
 
@@ -399,6 +399,6 @@ Dapat dilihat, proses training model cukup _smooth_ dan model konvergen di sekit
 
 # Referensi
 
-[1] C. Puwowidhu, “Kian Melesat di 2023, Pariwisata Indonesia Bersiap Menuju Level Prapandemi” Media Keuangan Kemenkeu, https://mediakeuangan.kemenkeu.go.id/article/show/kian-melesat-di-2023-pariwisata-indonesia-bersiap-menuju-level-prapandemi (accessed Sep. 20, 2023).
-[2] “Peningkatan kunjungan wisatawan mancanegara pada April 202,” Badan Pusat Statistik, https://www.bps.go.id/pressrelease/2023/06/05/1978/peningkatan-kunjungan-wisatawan-mancanegara-pada-april-2023-yang-tumbuh-276-31-persen-dibandingkan-april-2023-dan-jumlah-penumpang-angkutan-laut-dalam-negeri-pada-april-2023-naik-24-75-persen.html (accessed Sep. 20, 2023).
+[1] C. Puwowidhu, “Kian Melesat di 2023, Pariwisata Indonesia Bersiap Menuju Level Prapandemi” Media Keuangan Kemenkeu, https://mediakeuangan.kemenkeu.go.id/article/show/kian-melesat-di-2023-pariwisata-indonesia-bersiap-menuju-level-prapandemi (accessed Sep. 20, 2023). \
+[2] “Peningkatan kunjungan wisatawan mancanegara pada April 202,” Badan Pusat Statistik, https://www.bps.go.id/pressrelease/2023/06/05/1978/peningkatan-kunjungan-wisatawan-mancanegara-pada-april-2023-yang-tumbuh-276-31-persen-dibandingkan-april-2023-dan-jumlah-penumpang-angkutan-laut-dalam-negeri-pada-april-2023-naik-24-75-persen.html (accessed Sep. 20, 2023). \
 [3] “Kunjungan Wisatawan Mancanegara Indonesia Juni 2023,” Badan Pusat Statistik, https://www.bps.go.id/pressrelease/2023/08/01/1980/kunjungan-wisatawan-mancanegara-pada-juni-2023-tumbuh-119-64-persen-bila-dibandingkan-bulan-yang-sama-pada-tahun-lalu-dan-jumlah-penumpang-angkutan-udara-internasional-pada-juni-2023-naik-10-66-persen.html (accessed Sep. 20, 2023). 
